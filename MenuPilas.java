@@ -10,8 +10,9 @@ public class MenuPilas {
         while (seguir) {
             System.out.println("---------MENU DE PILAS----");
             System.out.println("1. Ingresar pagina");
-            System.out.println("2. Regresar a pagina anterior");
-            System.out.println("3. ver historial");
+            System.out.println("2. Regresar a pagina anterior y mostrarla");
+            System.out.println("3. ver historial ");
+            System.out.println("4. salir del menu de pilas");
 
             System.out.println("Ingrese una opcion");
             int op=sc.nextInt();
@@ -22,22 +23,24 @@ public class MenuPilas {
                     break;
 
                 case 2:
-                    
+                    m.retrocerPag(pila);
                     break;
 
                 case 3:
                     m.MostrarPila(pila);
                     break;
-            
+                
+                case 4:
+                     
+                seguir=false;
+                     
+                 break;
                 default:
                     System.out.println("Opcion no valida");
                     break;
             }
             
-            if (op==4) {
-                seguir=false;
-                
-            }
+           
         }
 
     }
